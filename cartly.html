@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cartly — Alex Carter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="images/alex-logo.png" alt="Alex Carter logo" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><span class="nav-sep">/</span></li>
+      <li><a href="projects.html" class="nav-link active">Projects</a></li>
+      <li><span class="nav-sep">/</span></li>
+      <li><a href="contact.html" class="nav-link">Contact Me</a></li>
+    </ul>
+    <a href="https://linkedin.com" target="_blank" class="nav-linkedin">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+      </svg>
+      <span>LinkedIn</span>
+    </a>
+  </nav>
+
+  <div class="project-detail-page">
+    <div class="project-detail-content">
+
+      <a href="projects.html" class="back-link fade-in fade-in-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back to Projects
+      </a>
+
+      <div class="project-detail-header fade-in fade-in-2">
+        <div class="project-detail-tags">
+          <span class="project-tag">Front-end Dev</span>
+          <span class="project-tag">HTML / CSS / JS</span>
+          <span class="project-tag">2025</span>
+        </div>
+        <h1 class="project-detail-title">Cartly — E-commerce Frontend</h1>
+        <p class="project-detail-subtitle">
+          A fully responsive e-commerce storefront built with plain HTML, CSS, and JavaScript,
+          featuring a filterable product grid and an animated slide-out cart.
+        </p>
+      </div>
+
+      <div class="project-detail-img fade-in fade-in-3">
+        <img src="images/project-placeholder.jpg" alt="Cartly e-commerce storefront" />
+      </div>
+
+      <div class="project-detail-meta fade-in fade-in-4">
+        <div class="meta-item">
+          <h3>Year</h3>
+          <p>2025</p>
+        </div>
+        <div class="meta-item">
+          <h3>Role</h3>
+          <p>Front-end Developer</p>
+        </div>
+        <div class="meta-item">
+          <h3>Tools</h3>
+          <p>HTML, CSS, JavaScript</p>
+        </div>
+      </div>
+
+      <div class="project-detail-section fade-in fade-in-5">
+        <h2>Overview</h2>
+        <p>
+          Cartly is a front-end only e-commerce storefront. All the product data lives
+          in a JavaScript array and the page renders the product cards dynamically when
+          it loads. There is no backend — adding to the cart updates a state object in
+          memory and the cart UI reflects that.
+        </p>
+        <p>
+          I built this mainly to practise working with the DOM at a larger scale than I
+          had before. Previous projects had relatively few moving parts; this one needed
+          filters, a cart with quantity controls, a running total, and a checkout flow
+          — all in vanilla JS.
+        </p>
+      </div>
+
+      <div class="project-detail-section">
+        <h2>Process</h2>
+        <div class="process-grid">
+          <div class="process-card">
+            <div class="process-step-num">01</div>
+            <h3>Data & Rendering</h3>
+            <p>Defined a product array with 12 items, each with a name, price, category, and image. A renderProducts() function reads the current filter state and rebuilds the grid — no page reload needed.</p>
+          </div>
+          <div class="process-card">
+            <div class="process-step-num">02</div>
+            <h3>Filtering</h3>
+            <p>Category filter buttons update a currentFilter variable and call renderProducts() again. The active button gets a highlighted style. Took a while to figure out how to keep the cart state intact when re-rendering the grid.</p>
+          </div>
+          <div class="process-card">
+            <div class="process-step-num">03</div>
+            <h3>Cart Drawer</h3>
+            <p>The cart is a fixed panel that slides in from the right using a CSS transform transition. It's always in the DOM but off-screen; clicking the cart icon toggles a class that moves it into view.</p>
+          </div>
+          <div class="process-card">
+            <div class="process-step-num">04</div>
+            <h3>Checkout Flow</h3>
+            <p>A simple three-step flow (cart review → address form → confirmation) built with three hidden divs that get shown one at a time. The address form does basic validation before allowing the next step.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-detail-section">
+        <h2>Outcome</h2>
+        <p>
+          Cartly was the most complex front-end project I had built at the time.
+          Managing state across multiple parts of the UI (the product grid, the cart
+          icon badge, the cart drawer) without a framework was genuinely challenging
+          and taught me a lot about how to structure JavaScript in larger projects.
+        </p>
+        <div class="outcome-box">
+          <p>
+            The main thing I'd do differently is separate the data, the state management,
+            and the rendering into clearer functions from the start. Halfway through the
+            project the JS file was getting hard to navigate — I ended up refactoring
+            the cart logic into its own section, which helped a lot.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

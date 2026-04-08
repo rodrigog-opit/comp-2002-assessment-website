@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orbitask — Alex Carter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <img src="images/alex-logo.png" alt="Alex Carter logo" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><span class="nav-sep">/</span></li>
+      <li><a href="projects.html" class="nav-link active">Projects</a></li>
+      <li><span class="nav-sep">/</span></li>
+      <li><a href="contact.html" class="nav-link">Contact Me</a></li>
+    </ul>
+    <a href="https://linkedin.com" target="_blank" class="nav-linkedin">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+      </svg>
+      <span>LinkedIn</span>
+    </a>
+  </nav>
+
+  <div class="project-detail-page">
+    <div class="project-detail-content">
+
+      <a href="projects.html" class="back-link fade-in fade-in-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back to Projects
+      </a>
+
+      <div class="project-detail-header fade-in fade-in-2">
+        <div class="project-detail-tags">
+          <span class="project-tag">UX Design</span>
+          <span class="project-tag">UI Redesign</span>
+          <span class="project-tag">2025</span>
+        </div>
+        <h1 class="project-detail-title">Orbitask — PM Tool Redesign</h1>
+        <p class="project-detail-subtitle">
+          A redesign of a project management tool's task board, aimed at reducing
+          visual clutter and making it easier to prioritise work at a glance.
+        </p>
+      </div>
+
+      <div class="project-detail-img fade-in fade-in-3">
+        <img src="images/project-placeholder.jpg" alt="Orbitask redesign mockup" />
+      </div>
+
+      <div class="project-detail-meta fade-in fade-in-4">
+        <div class="meta-item">
+          <h3>Year</h3>
+          <p>2025</p>
+        </div>
+        <div class="meta-item">
+          <h3>Role</h3>
+          <p>UI/UX Designer</p>
+        </div>
+        <div class="meta-item">
+          <h3>Tools</h3>
+          <p>Figma, Notion, Maze</p>
+        </div>
+      </div>
+
+      <div class="project-detail-section fade-in fade-in-5">
+        <h2>Overview</h2>
+        <p>
+          Orbitask is a fictional project management tool that I used as the subject
+          for a redesign exercise. The original interface had a cluttered sidebar,
+          inconsistent use of colour to indicate priority, and a task board that
+          felt overwhelming when a project had more than a dozen items.
+        </p>
+        <p>
+          The brief I set for myself was to redesign the task board view so that
+          a user could immediately understand the state of a project — what's blocked,
+          what's in progress, and what needs attention — without having to read
+          every card in detail.
+        </p>
+      </div>
+
+      <div class="project-detail-section">
+        <h2>Process</h2>
+        <div class="process-grid">
+          <div class="process-card">
+            <div class="process-step-num">01</div>
+            <h3>Audit of the Original</h3>
+            <p>Started by documenting all the usability issues in the original design — 11 in total, ranging from poor colour contrast on status badges to a sidebar with 14 items that most users ignored.</p>
+          </div>
+          <div class="process-card">
+            <div class="process-step-num">02</div>
+            <h3>Competitive Analysis</h3>
+            <p>Looked at how Linear, Notion, and Asana handle task boards. Linear's approach to priority indicators and Notion's collapsible sections were the most useful references.</p>
+          </div>
+          <div class="process-card">
+            <div class="process-step-num">03</div>
+            <h3>Redesign</h3>
+            <p>Simplified the sidebar from 14 items to 6, introduced a consistent colour-coding system for priorities, and redesigned each task card to show only the most relevant information upfront.</p>
+          </div>
+          <div class="process-card">
+            <div class="process-step-num">04</div>
+            <h3>Validation</h3>
+            <p>Showed both versions (original and redesign) to 3 people unfamiliar with the product and asked them to find the highest-priority blocked task. All 3 found it faster in the redesign.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-detail-section">
+        <h2>Outcome</h2>
+        <p>
+          The redesign reduced the visual noise on the task board significantly. The
+          most noticeable improvement was the sidebar — simplifying it made the
+          board itself feel much less cramped.
+        </p>
+        <div class="outcome-box">
+          <p>
+            The key takeaway from this project was that redesigning something existing
+            is harder than designing from scratch — you have to decide what to keep, not
+            just what to add. The constraint of not changing the underlying functionality
+            forced more creative layout decisions.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
